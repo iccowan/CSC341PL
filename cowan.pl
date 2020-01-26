@@ -122,6 +122,8 @@ cleared_by_dps(lab).
 no_magic(real_analysis_book).
 
 % Room where magic was found
+% For Olin to be destroyed, something
+% magical had to have taken place
 magic_found(chemistry_prep).
 
 /*
