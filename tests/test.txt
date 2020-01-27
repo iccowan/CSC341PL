@@ -1,0 +1,50 @@
+# Ian Cowan
+# P3 Clue Tests
+#
+# The point of this test is to confirm that there
+# is only one possible solution, and will be run
+# manually from the command line.
+
+# We know that the following is the output solution
+# by running 'foundSuspect(Suspect, Room, Weapon)
+#
+# Suspect = mcallister
+# Room = chemistry_prep
+# Weapon = compiler
+# (Confirmed by hand to be the correct solution.
+#
+# Now, let's try these individually and confirm that
+# no other answers pop up. The input follows below
+# and the respective output follows each input:
+
+foundSuspect(mcallister, Room, Weapon).
+Room = chemistry_prep,
+Weapon = compiler.
+
+foundSuspect(Suspect, chemistry_prep, Weapon).
+Suspect = mcallister,
+Weapon = compiler.
+
+foundSuspect(Suspect, Room, compiler).
+Suspect = mcallister,
+Room = chemistry_prep.
+
+foundSuspect(mcallister, chemistry_prep, Weapon).
+Weapon = compiler.
+
+foundSuspect(mcallister, Room, compiler).
+Room = chemistry_prep.
+
+foundSuspect(mcallister, chemistry_prep, Weapon).
+Suspect = mcallister.
+
+foundSuspect(Suspect, chemistry_prep, compiler).
+Suspect = mcallister.
+
+foundSuspect(mcallister, Room, compiler).
+Room = chemistry_prep.
+
+# From these results, we can conclude that there
+# is only one possible solution which we confirmed
+# by hand. Therefore, this program must work properly
+# and end with only one solution to the problem.
